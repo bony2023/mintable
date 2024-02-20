@@ -172,7 +172,7 @@ export class PlaidIntegration {
 
             server = require('http')
                 .createServer(app)
-                .listen('8000')
+                .listen(process.env.MINTABLE_APP_PORT || '8000')
         })
     }
 

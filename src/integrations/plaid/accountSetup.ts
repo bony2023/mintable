@@ -18,7 +18,6 @@ export default async () => {
             const plaid = new PlaidIntegration(config)
 
             logInfo('Account setup in progress.')
-            open(`http://localhost:8000?environment=${plaidConfig.environment}`)
             await plaid.accountSetup()
 
             logInfo('Successfully set up Plaid Account(s).')
